@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_str_is_numeric.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: telias-p <telias-p@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: sbertali <sbertali@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/12 18:26:34 by telias-p          #+#    #+#             */
-/*   Updated: 2021/03/12 18:53:13 by telias-p         ###   ########.fr       */
+/*   Created: 2021/03/12 18:26:34 by sbertali          #+#    #+#             */
+/*   Updated: 2021/03/13 18:40:50 by sbertali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
