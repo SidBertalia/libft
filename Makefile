@@ -6,7 +6,7 @@
 #    By: sbertali <sbertali@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/14 17:00:55 by sbertali          #+#    #+#              #
-#    Updated: 2021/02/17 23:49:16 by sbertali         ###   ########.fr        #
+#    Updated: 2021/03/13 17:21:18 by sbertali         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -67,6 +67,26 @@ BONUS_F	=	ft_lstadd_back.c\
 
 BONUS_O	=	$(BONUS_F:.c=.o)
 
+EXTRA_F	=	ft_putchar.c\
+			ft_putnbr.c\
+			ft_putstr.c\
+			ft_str_is_alpha.c\
+			ft_str_is_lowercase.c\
+			ft_str_is_numeric.c\
+			ft_str_is_printable.c\
+			ft_str_is_uppercase.c\
+			ft_strcat.c\
+			ft_strclen.c\
+			ft_strcmp.c\
+			ft_strcpy.c\
+			ft_strdel.c\
+			ft_strjoin_free.c\
+			ft_strncat.c\
+			ft_strncpy.c\
+			ft_strstr.c
+
+EXTRA_O = $(EXTRA_F:.c=.o)
+
 all:	$(NAME)
 
 $(NAME):	$(OBJ) $(INCLUDE)
@@ -77,17 +97,21 @@ bonus:		$(NAME) $(BONUS_O)
 			$(LFLAG) $(NAME) $(BONUS_O)
 			$(INDEX) $(NAME)
 
+extra:		$(NAME) $(BONUS_O) $(EXTRA_O)
+			$(LFLAG) $(NAME) $(BONUS_O) $(EXTRA_O)
+			$(INDEX) $(NAME)
+
 cto:
 			$(CC) $(CFLAG) -I $(INCLUDE) -c $< -o $(<:.c=.o)
 
 clean:
-			$(RM) $(OBJ) $(BONUS_O)
+			$(RM) $(OBJ) $(BONUS_O) $(EXTRA_O)
 
 fclean:		clean
 			$(RM) $(NAME)
 
 re:			fclean all
 
-rebonus:	fcleam bonus
+rebonus:	fclean bonus extra
 
-.PHONY:		all clean fcleam re bonus rebonus
+.PHONY:		all clean fclean re bonus extra rebonus

@@ -6,7 +6,7 @@
 /*   By: sbertali <sbertali@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 16:50:49 by sbertali          #+#    #+#             */
-/*   Updated: 2021/02/20 14:50:50 by sbertali         ###   ########.fr       */
+/*   Updated: 2021/03/13 17:19:31 by sbertali         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,14 +48,31 @@ int					ft_tolower(int c);
 int					ft_toupper(int c);
 char				*ft_itoa(int n);
 void				ft_putchar_fd(char c, int fd);
+void				ft_putchar(char c);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int nb, int fd);
+void				ft_putnbr(int n);
 void				ft_putstr_fd(char *s, int fd);
+void				ft_putstr(char *str);
 char				**ft_split(char const *s, char c);
+int					ft_str_is_alpha(char *str);
+int					ft_str_is_lowercase(char *str);
+int					ft_str_is_numeric(char *str);
+int					ft_str_is_printable(char *str);
+int					ft_str_is_uppercase(char *str);
+char				*ft_strcat(char *dest, char *src);
+size_t				ft_strclen(const char *str, const char c);
+int					ft_strcmp(char *s1, char *s2);
+char				*ft_strcpy(char *dest, char *src);
+void				ft_strdel(char **str);
+char				*ft_strjoin_free(char *dest, char *src);
+char				*ft_strncat(char *dest, char *src, unsigned int nb);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strtrim(char const *s1, char const *set);
 char				*ft_substr(char const *s, unsigned int start, size_t len);
+char				*ft_strncpy(char *dest, char *src, unsigned int n);
+char				*ft_strstr(const char *text, const char *wrd);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstclear(t_list **lst, void (*del)(void *));
